@@ -7,6 +7,7 @@
  * # HomeworkCtrl
  * Controller of the clientApp
  */
- angular.module('clientApp').controller('HomeworkCtrl', function ($scope, Homework) {
+ angular.module('clientApp').controller('HomeworkCtrl', function ($scope, Homework, $rootScope) {
    $scope.homeworks = Homework.getList().$object;
+   $rootScope.homeworkList = $scope.homeworks;
  });

@@ -13,7 +13,7 @@
         <td>{{ homework.dueDate | date : 'short' }}</td>
         <td>
           <div class="button-group">
-            <a ng-href="/#/create/submission?hwID={{homework._id}}" class="btn btn-default">
+            <a ng-href="/#/create/submission?hwID={{homework._id}}&title={{homework.title}}&question={{homework.question}}" class="btn btn-default">
               <span class="glyphicon glyphicon-plus text-success"> Submit</span>
             </a>
           </div>
