@@ -10,7 +10,7 @@
   <tbody>
     <tr ng-repeat="homework in homeworks">
         <td>{{ homework.title }}</td>
-        <td>{{ homework.dueDate }}</td>
+        <td>{{ homework.dueDate | date : 'short' }}</td>
         <td>
           <div class="button-group">
             <a ng-href="/#/create/submission?hwID={{homework._id}}" class="btn btn-default">
