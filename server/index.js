@@ -21,11 +21,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/hello', function(req, res, next) {
-  res.send('Hello world!');
-  next();
-})
-
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/homeworkify');
 mongoose.connection.once('open', function() {
