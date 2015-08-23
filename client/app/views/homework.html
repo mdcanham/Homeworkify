@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>Homework</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <td><strong>Homework Name</strong></td>
+    <td><strong>Due date</strong></td>
+  </thead>
+  <tbody>
+    <tr ng-repeat="homework in homeworks">
+        <td>{{ homework.title }}</td>
+        <td>{{ homework.dueDate }}</td>
+        <td>
+          <div class="button-group">
+            <a ng-href="/#/create/submission?hwID={{homework._id}}" class="btn btn-default">
+              <span class="glyphicon glyphicon-plus text-success"> Submit</span>
+            </a>
+          </div>
+        </td>
+    </tr>
+  </tbody>
+</table>

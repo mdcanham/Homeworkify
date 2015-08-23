@@ -89,3 +89,8 @@ body {
     border-bottom: 0;
   }
 }
+
+textarea.full-height-ta {
+  resize: vertical;
+  min-height: 250px;
+}

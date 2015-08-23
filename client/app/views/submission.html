@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1>Homework</h1>
+</div>
+<p>{{ hwSubmission }}</p>
+<table class="table">
+  <tr ng-repeat="subm in hwSubmissions">
+    <td>{{ subm.title }}</td>
+    <td>{{ subm.dueDate }}</td>
+  </tr>
+</table>

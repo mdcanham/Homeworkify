@@ -38,10 +38,22 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/submissions">Submissions</a></li>
+              <li class="active"><a href="#/">Homework</a></li>
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">user.name<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/">About</a></li>
+                  <li><a href="/">Account Settings</a></li>
+                  <li><a href="/">Help</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/logout">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+
           </div>
         </div>
       </div>
@@ -82,9 +94,9 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/submissions.js"></script>
+        <script src="scripts/controllers/submission.js"></script>
+        <script src="scripts/controllers/homework.js"></script>
+        <script src="scripts/controllers/submission-add.js"></script>
         <!-- endbuild -->
 </body>
 </html>

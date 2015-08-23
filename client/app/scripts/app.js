@@ -19,19 +19,21 @@ angular
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        redirectTo: '/homework'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/submission', {
+        templateUrl: 'views/submission.html',
+        controller: 'SubmissionCtrl',
       })
-      .when('/submissions', {
-        templateUrl: 'views/submissions.html',
-        controller: 'SubmissionsCtrl',
-        controllerAs: 'submissions'
+      .when('/homework', {
+        templateUrl: 'views/homework.html',
+        controller: 'HomeworkCtrl',
+        controllerAs: 'homework'
+      })
+      .when('/create/submission', {
+        templateUrl: 'views/submission-add.html',
+        controller: 'SubmissionAddCtrl',
+        controllerAs: 'submissionAdd'
       })
       .otherwise({
         redirectTo: '/'
@@ -48,4 +50,16 @@ angular
 
 .factory('Submission', function(SubmissionRestangular) {
   return SubmissionRestangular.service('submission'); //This reffers to the submission endpoint on our server
+})
+
+.factory('HomeworkRestangular', function(Restangular) {
+  return Restangular.withConfig(function(RestangularConfigurer) {
+    RestangularConfigurer.setRestangularFields({
+      id: '_id'
+    });
+  });
+})
+
+.factory('Homework', function(HomeworkRestangular) {
+  return HomeworkRestangular.service('homework'); //This reffers to the submission endpoint on our server
 });

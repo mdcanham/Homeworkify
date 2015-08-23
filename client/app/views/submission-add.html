@@ -1,0 +1,14 @@
+
+<h1>{{ title }}</h1>
+
+<br>
+
+<form role="form">
+  <div class="form-group">
+    <label for="content" class="control-label">My Answer:</label>
+    <textarea type="text" ng-model="submission.content" class="form-control full-height-ta" id="content" placeholder="Enter your answer here..."></textarea>
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="saveSubmission()" value="Save">
+</form>
+
+<br>
